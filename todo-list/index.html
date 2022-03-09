@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>To Do List</title>
+    <link rel="stylesheet" href="https://cdn.usebootstrap.com/bootstrap/4.6.0/css/bootstrap.min.css" />
+
+    <style>
+        #addForm {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .listgroup {
+            display: flex;
+        }
+
+        li.list-group-item {
+            width: 400px;
+            max-width: 800px;
+        }
+
+        li.list-group-item>button {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Add Items to the list</h2>
+
+        <form id="addForm">
+            <input class="form-control" style="display: flex; flex: 1" type="text" id="item" />
+            <input class="btn btn-success" type="submit" id="submit" value="Submit" />
+        </form>
+
+        <h3 class="text-center">Tasks to be completed</h3>
+
+        <form id="addForm">
+            <ul class="list-group" id="items"></ul>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.usebootstrap.com/bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.usebootstrap.com/bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.usebootstrap.com/bootstrap/4.6.0/css/bootstrap.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <script>
+    function validateForm() {
+      let x = document.forms["myForm"]["username"].value;
+      let y = document.forms["myForm"]["password"].value;
+      let z = document.forms["myForm"]["phone"].value;
+      console.log(z);
+
+
+
+      if (x == "" && y == "" && z == "") {
+
+        alert("User Name  , password and phone number must be filled out");
+        return false;
+
+      }
+      if (x == "" && y == "") {
+
+        alert("User Name  and password must be filled out");
+        return false;
+
+      } if ( y == "" && z == "") {
+
+        alert(" password and phone number must be filled out");
+        return false;
+
+      }
+      if (x == "" && z == "") {
+
+        alert("User Name  and phone number must be filled out");
+        return false;
+
+      }
+      if (y == "") {
+        alert("password must be filled out");
+        return false;
+
+      }
+      if (z == "") {
+        alert("number must be filled out");
+        return false;
+
+      }
+      if (z.length != 10) {
+        alert("phone number must be of 10 digit ");
+        return false;
+
+      }
+      if (x == "") {
+        alert("Username must be filled out");
+
+
+        return false;
+      }
+      if (y.length < 8) {
+        alert("Your password must be at least 8 characters");
+
+        return false;
+      }
+      if (y.search(/[a-z]/i) < 0) {
+        alert("Your password must contain at least one character.");
+        return false;
+      }
+      if (y.search(/[0-9]/) < 0) {
+        alert("Your password must contain at least one digit.");
+        return false;
+      }
+      if (x.search(/[0-9]/) > 0) {
+        alert("number cannot be used in username");
+        return false;
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <h2>JavaScript Validation</h2>
+
+    <form name="myForm" action="https://anki1436.github.io/irrigation.com/" onsubmit="return validateForm()"
+      method="PATCH">
+      <input type="text" name="username" placeholder="Enter User Name" />
+      <!-- <span id="user-err" >username</span> -->
+      <input type="password" name="password" placeholder="Enter  Password" />
+      <input type="number" name="phone" placeholder=" Enter Phone Number" />
+      <button type="submit" value="submit">Submit</button>
+    </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.usebootstrap.com/bootstrap/4.6.0/js/bootstrap.min.js"></script>
+  <script src="https://cdn.usebootstrap.com/bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
